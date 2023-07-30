@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Brick Breaker</title>
+</head>
+<body>
+    <div id="welcomebox">
+        <div id="first">
+            <h1 id="title">Breakout ! 🧱</h1>
+            <button id="play" onclick="showChoice()">PLAY</button>
+        </div>
+        <div id="second">
+            <p id="title2">Which level do you want to play?</p>
+            <button id="play" onclick="setLevel('easy')">Easy</button>
+            <button id="play" onclick="setLevel('medium')">Medium</button>
+            <button id="play" onclick="setLevel('hard')">Hard</button>
+        </div>
+        <button id="start" onclick="startGame()">START GAME</button>
+        <p id="obj">⚒ Break all blocks before 
+            the timer runs out.<br>
+            ⚒ you must not let the ball hit the floor,<br>
+            else broken blocks are restored
+        </p>
+    </div>
+    <div id="endbox">
+        <h1 id="lose">YOU LOSE 😢</h1>
+        <h1 id="win">YOU WIN 😁✨🎉</h1>
+        <button id="play" onclick="showChoice()" >PLAY AGAIN</button>
+    </div>
+    <div id="timer-box">
+        <span id="minute">00</span><span id="d">:</span><span id="seconds">00</span>
+    </div>
+    <canvas id="canvas" width="370" height="400"></canvas>
+    <div id="buttons">
+        <button id="left" onclick="moveLeft()" >&leftarrow;</button>
+        <button id="right" onclick="moveRight()" >&rightarrow;</button>
+    </div>
+    <span id="footer" >&copy;<a href="https://github/alimancs">Alimamcs</a> 2023 All right reserved</span>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(46, 46, 46);
+    display:grid;
+    place-content: center;
+    min-height: 93vh;
+}
+#canvas {
+    background-color: white;
+    border-radius: 1px;
+}
+#buttons {
+    display:flex;
+    place-content: center;
+}
+#left, #right {
+    width:90px;
+    height:53px;
+    background-color: black;
+    color:white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left:10px;
+    margin-right: 10px;
+    transition:background-color 0.2s ease-in-out;
+    margin-top: 10px;
+}
+#left:hover, #right:hover {
+    background-color: rgb(130, 130, 130);
+    color:black;
+    border:2px solid black;
+}
+#welcomebox, #endbox {
+    width:380px;
+    height:500px;
+    background-color: black;
+    position: absolute;
+    place-content: center;
+    display: grid;
+    place-self: center;
+    border-radius: 10px;
+}
+#endbox {
+    display:none;
+}
+#first {
+    display:grid;
+}
+#second,  #obj {
+    display:none;
+}
+#title, #title2, #lose, #win, #obj {
+    color:white;
+    font-family: helvetica;
+    animation-name: move-in;
+    animation-duration: 1s;
+}
+#obj {
+    text-align: center;
+}
+#lose {
+    color:red;
+    display:none;
+}
+
+#play, #start {
+    height:40px;
+    place-self: center;
+    width:140px;
+    color:white;
+    background-color: black;
+    border:2px solid white;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    animation-name: move-in;
+    animation-duration: 1s;
+}
+#start {
+    width:200px;
+    display:none;
+    animation-name: move-in;
+    animation-duration: 1s;
+}
+#play:hover {
+    background-color: white;
+    color:black;
+    border:2px ridge rgb(128, 128, 128);
+}
+#start:hover {
+    background-color: red;
+    color:black;
+    border:2px solid black;
+}
+#timer-box {
+    color:white;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+#footer {
+    place-self: center;
+    color:white;
+    font-family: sans-serif;
+   font-size: 10px;
+}
+@keyframes move-in {
+    0%{margin-left:200px;opacity: 0%;}
+    70%{opacity: 50%;}
+    100%{margin-left: 0px;opacity: 100%;}
+}
+@media  (max-width:800px) {
+    #welcomebox, #endbox {
+        margin-top:50px;
+        width:380px;
+        height:800px;
+    }
+    #left, #right {
+        width:120px;
+        height:90px;
+        font-size: 20px;
+        margin-top:130px;
+    }
+    #footer {
+     margin-top:50px;
+    }
+}
+@media  (max-height:660px) {
+    #welcomebox, #endbox {
+        width:380px;
+        height:600px;
+    }
+    #left, #right {
+        width:90px;
+        height:50px;
+        font-size: 20px;
+        margin-top:20px;
+    }
+    #footer {
+        margin-top:0px;
+       }
+
+}
